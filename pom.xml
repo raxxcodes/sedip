@@ -9,6 +9,10 @@
     <name>SEDIP</name>
     <description>Smart Enterprise Data Intelligence Platform</description>
 
+    <modules>
+        <module>backend/common-library</module>
+    </modules>
+
     <properties>
         <java.version>21</java.version>
         <spring.boot.version>3.5.0</spring.boot.version>

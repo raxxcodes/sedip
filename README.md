@@ -1,16 +1,43 @@
 # SEDIP
 Smart Enterprise Data Intelligence Platform
 
-## Objective
+## Overview
 
-SEDIP is an enterprise platform that automates Excel-based business workflows.
+SEDIP is a cloud-native enterprise platform that automates Excel-based business workflow.
 
-Features
+It performs:
 
-- Excel Upload
-- Rule Engine
-- Validation Engine
-- Data Quality Analytics
-- AI Insights
-- AWS Integration
-- Dashboard
+- Intelligent Excel ingestion
+- Configurable validation
+- Business rule execution
+- Data quality scoring
+- AI-powered Insights
+- Enterprise Analytics
+- Event-driven processing
+
+---
+
+## Technology Stack
+
+Backend
+- Java
+- Spring Boot
+- Spring AI
+- Spring Batch
+
+Cloud
+- AWS S3
+- AWS SQS
+- Aurora PostgreSQL
+- SES
+
+Analytics
+- Python
+- Power BI
+
+Frontend
+- React
+
+Infrastructure
+- Docker
+- Kubernetes

@@ -1,5 +1,6 @@
 package com.raxxcodes.sedip.upload.exception;
 
+import com.raxxcodes.sedip.common.exception.InvalidFileException;
 import com.raxxcodes.sedip.common.exception.ResourceNotFoundException;
 import com.raxxcodes.sedip.common.response.ApiResponse;
 import org.springframework.http.HttpStatus;
@@ -32,5 +33,21 @@ public class GlobalExceptionHandler {
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(response);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ApiResponse<Void>> handleIllegalArgument(
+            IllegalArgumentException ex) {
+
+        return ResponseEntity.badRequest()
+                .body(ApiResponse.error(ex.getMessage()));
+    }
+
+    @ExceptionHandler(InvalidFileException.class)
+    public ResponseEntity<ApiResponse<Void>> handleInvalidFileException(
+            InvalidFileException ex) {
+
+        return ResponseEntity.badRequest()
+                .body(ApiResponse.error(ex.getMessage()));
     }
 }
